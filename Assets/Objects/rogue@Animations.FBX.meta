@@ -1,0 +1,458 @@
+fileFormatVersion: 2
+guid: e929a589f4168bc48a9585737bd7ceaa
+timeCreated: 1522106719
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bag
+    100002: Base Human
+    100004: Base HumanHead
+    100006: Base HumanHeadGizmo
+    100008: Base HumanLCalf
+    100010: Base HumanLCollarbone
+    100012: Base HumanLCollarboneGizmo
+    100014: Base HumanLDigit11
+    100016: Base HumanLDigit11 1
+    100018: Base HumanLDigit11Gizmo
+    100020: Base HumanLDigit11Gizmo 1
+    100022: Base HumanLDigit12
+    100024: Base HumanLDigit12Gizmo
+    100026: Base HumanLDigit13
+    100028: Base HumanLDigit13Gizmo
+    100030: Base HumanLDigit21
+    100032: Base HumanLDigit21Gizmo
+    100034: Base HumanLDigit22
+    100036: Base HumanLDigit22Gizmo
+    100038: Base HumanLDigit23
+    100040: Base HumanLDigit23Gizmo
+    100042: Base HumanLDigit31
+    100044: Base HumanLDigit31Gizmo
+    100046: Base HumanLDigit32
+    100048: Base HumanLDigit32Gizmo
+    100050: Base HumanLDigit33
+    100052: Base HumanLDigit33Gizmo
+    100054: Base HumanLFoot
+    100056: Base HumanLForearm
+    100058: Base HumanLIKTarget
+    100060: Base HumanLPalm
+    100062: Base HumanLPalmGizmo
+    100064: Base HumanLPlatform
+    100066: Base HumanLThigh
+    100068: Base HumanLThighGizmo
+    100070: Base HumanLUpperarm
+    100072: Base HumanLUpperarmGizmo
+    100074: Base HumanNeck1
+    100076: Base HumanNeck2
+    100078: Base HumanPelvis
+    100080: Base HumanPelvisGizmo
+    100082: Base HumanRCalf
+    100084: Base HumanRCollarbone
+    100086: Base HumanRCollarboneGizmo
+    100088: Base HumanRDigit11
+    100090: Base HumanRDigit11 1
+    100092: Base HumanRDigit11Gizmo
+    100094: Base HumanRDigit11Gizmo 1
+    100096: Base HumanRDigit12
+    100098: Base HumanRDigit12Gizmo
+    100100: Base HumanRDigit13
+    100102: Base HumanRDigit13Gizmo
+    100104: Base HumanRDigit21
+    100106: Base HumanRDigit21Gizmo
+    100108: Base HumanRDigit22
+    100110: Base HumanRDigit22Gizmo
+    100112: Base HumanRDigit23
+    100114: Base HumanRDigit23Gizmo
+    100116: Base HumanRDigit31
+    100118: Base HumanRDigit31Gizmo
+    100120: Base HumanRDigit32
+    100122: Base HumanRDigit32Gizmo
+    100124: Base HumanRDigit33
+    100126: Base HumanRDigit33Gizmo
+    100128: Base HumanRFoot
+    100130: Base HumanRForearm
+    100132: Base HumanRibcage
+    100134: Base HumanRibcageGizmo
+    100136: Base HumanRIKTarget
+    100138: Base HumanRPalm
+    100140: Base HumanRPalmGizmo
+    100142: Base HumanRPlatform
+    100144: Base HumanRThigh
+    100146: Base HumanRThighGizmo
+    100148: Base HumanRUpperarm
+    100150: Base HumanRUpperarmGizmo
+    100152: Base HumanSpine1
+    100154: Base HumanSpine2
+    100156: Base HumanSpine3
+    100158: Base HumanSpine4
+    100160: Bone001
+    100162: Bone002
+    100164: Bone003
+    100166: Bone004
+    100168: Bone005
+    100170: Bone006
+    100172: Bone007
+    100174: Bone008
+    100176: Bone009
+    100178: Bone010
+    100180: Bone011
+    100182: Bone012
+    100184: Bone013
+    100186: Bone014
+    100188: Bone015
+    100190: Bone016
+    100192: Bone017
+    100194: Bone018
+    100196: Bone019
+    100198: Bone020
+    100200: Bone021
+    100202: Bone022
+    100204: Bone023
+    100206: Bone024
+    100208: //RootNode
+    100210: Rogue_Character
+    100212: Rogue_Sword
+    100214: Shoulder_Cape
+    400000: Bag
+    400002: Base Human
+    400004: Base HumanHead
+    400006: Base HumanHeadGizmo
+    400008: Base HumanLCalf
+    400010: Base HumanLCollarbone
+    400012: Base HumanLCollarboneGizmo
+    400014: Base HumanLDigit11
+    400016: Base HumanLDigit11 1
+    400018: Base HumanLDigit11Gizmo
+    400020: Base HumanLDigit11Gizmo 1
+    400022: Base HumanLDigit12
+    400024: Base HumanLDigit12Gizmo
+    400026: Base HumanLDigit13
+    400028: Base HumanLDigit13Gizmo
+    400030: Base HumanLDigit21
+    400032: Base HumanLDigit21Gizmo
+    400034: Base HumanLDigit22
+    400036: Base HumanLDigit22Gizmo
+    400038: Base HumanLDigit23
+    400040: Base HumanLDigit23Gizmo
+    400042: Base HumanLDigit31
+    400044: Base HumanLDigit31Gizmo
+    400046: Base HumanLDigit32
+    400048: Base HumanLDigit32Gizmo
+    400050: Base HumanLDigit33
+    400052: Base HumanLDigit33Gizmo
+    400054: Base HumanLFoot
+    400056: Base HumanLForearm
+    400058: Base HumanLIKTarget
+    400060: Base HumanLPalm
+    400062: Base HumanLPalmGizmo
+    400064: Base HumanLPlatform
+    400066: Base HumanLThigh
+    400068: Base HumanLThighGizmo
+    400070: Base HumanLUpperarm
+    400072: Base HumanLUpperarmGizmo
+    400074: Base HumanNeck1
+    400076: Base HumanNeck2
+    400078: Base HumanPelvis
+    400080: Base HumanPelvisGizmo
+    400082: Base HumanRCalf
+    400084: Base HumanRCollarbone
+    400086: Base HumanRCollarboneGizmo
+    400088: Base HumanRDigit11
+    400090: Base HumanRDigit11 1
+    400092: Base HumanRDigit11Gizmo
+    400094: Base HumanRDigit11Gizmo 1
+    400096: Base HumanRDigit12
+    400098: Base HumanRDigit12Gizmo
+    400100: Base HumanRDigit13
+    400102: Base HumanRDigit13Gizmo
+    400104: Base HumanRDigit21
+    400106: Base HumanRDigit21Gizmo
+    400108: Base HumanRDigit22
+    400110: Base HumanRDigit22Gizmo
+    400112: Base HumanRDigit23
+    400114: Base HumanRDigit23Gizmo
+    400116: Base HumanRDigit31
+    400118: Base HumanRDigit31Gizmo
+    400120: Base HumanRDigit32
+    400122: Base HumanRDigit32Gizmo
+    400124: Base HumanRDigit33
+    400126: Base HumanRDigit33Gizmo
+    400128: Base HumanRFoot
+    400130: Base HumanRForearm
+    400132: Base HumanRibcage
+    400134: Base HumanRibcageGizmo
+    400136: Base HumanRIKTarget
+    400138: Base HumanRPalm
+    400140: Base HumanRPalmGizmo
+    400142: Base HumanRPlatform
+    400144: Base HumanRThigh
+    400146: Base HumanRThighGizmo
+    400148: Base HumanRUpperarm
+    400150: Base HumanRUpperarmGizmo
+    400152: Base HumanSpine1
+    400154: Base HumanSpine2
+    400156: Base HumanSpine3
+    400158: Base HumanSpine4
+    400160: Bone001
+    400162: Bone002
+    400164: Bone003
+    400166: Bone004
+    400168: Bone005
+    400170: Bone006
+    400172: Bone007
+    400174: Bone008
+    400176: Bone009
+    400178: Bone010
+    400180: Bone011
+    400182: Bone012
+    400184: Bone013
+    400186: Bone014
+    400188: Bone015
+    400190: Bone016
+    400192: Bone017
+    400194: Bone018
+    400196: Bone019
+    400198: Bone020
+    400200: Bone021
+    400202: Bone022
+    400204: Bone023
+    400206: Bone024
+    400208: //RootNode
+    400210: Rogue_Character
+    400212: Rogue_Sword
+    400214: Shoulder_Cape
+    2100000: 04 - Default
+    2100002: 06 - Default
+    2100004: 08 - Default
+    2100006: 01 - Default
+    2100008: 05 - Default
+    2100010: 02 - Default
+    2100012: 03 - Default
+    2100014: 09 - Default
+    2100016: 10 - Default
+    2300000: Bag
+    2300002: Rogue_Sword
+    3300000: Bag
+    3300002: Rogue_Sword
+    4300000: Rogue_Character
+    4300002: Bag
+    4300004: Shoulder_Cape
+    4300006: Rogue_Sword
+    7400000: R_Idle
+    7400002: R_LookAround
+    7400004: R_Walk
+    7400006: R_Attack
+    7400008: R_Run
+    9500000: //RootNode
+    13700000: Rogue_Character
+    13700002: Shoulder_Cape
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.2
+    animationPositionError: 0.2
+    animationScaleError: 0.2
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: R_Idle
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_LookAround
+      takeName: Take 001
+      firstFrame: 59
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_Walk
+      takeName: Take 001
+      firstFrame: 229
+      lastFrame: 258
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_Attack
+      takeName: Take 001
+      firstFrame: 265
+      lastFrame: 305
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: R_Run
+      takeName: Take 001
+      firstFrame: 319
+      lastFrame: 336
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
