@@ -118,7 +118,7 @@ public class Patroller : MonoBehaviour {
                 Wait((float)(AiParamaters / 1000));
                 break;
             case AI_TURN_TO_POINT:
-                FacePoint(CurrentPatrolPoint);
+                FaceAngle(AiParamaters);
                 break;
             case AI_FORWARD:
                 MoveForward(CurrentPatrolPoint);
@@ -210,12 +210,20 @@ public class Patroller : MonoBehaviour {
     /// <summary>
     /// Agent action, Turn to face point
     /// </summary>
-    /// <param name="point">Point to face</param>
-    private void FacePoint(Vector3 point) {
-        r.transform.LookAt(point);
-        //r.rotation.eulerAngles.y
-        //r.transform.rotation = Quaternion.Euler(0, Vector3.Angle(r.position, point), 0);
-        CommandIndex++;
+    /// <param name="angle">Angle to face</param>
+    private void FaceAngle(float angle) {
+        if (commandProcessing) {
+            float rot = Utility.DesireSmoothAngle(transform.rotation.eulerAngles.y, angle);
+
+            if (Mathf.Abs(rot) <= 1) {
+                CommandIndex++;
+                commandProcessing = false;
+            } else {
+                transform.Rotate(Vector3.up, rot);
+            }
+        } else {
+            commandProcessing = true;
+        }
     }
 
     /// <summary>

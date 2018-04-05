@@ -17,7 +17,7 @@ public class PatrollerEditor : Editor {
     {
         commandOptions.Clear();
         commandOptions.Add(Patroller.AI_WAIT, "Wait # ms");
-        commandOptions.Add(Patroller.AI_TURN_TO_POINT, "Turn to Point");
+        commandOptions.Add(Patroller.AI_TURN_TO_POINT, "Face Angle");
         commandOptions.Add(Patroller.AI_FORWARD, "Advance to Point");
 
         commandProperty = serializedObject.FindProperty("commands");
@@ -86,7 +86,7 @@ public class PatrollerEditor : Editor {
                 EditorGUILayout.BeginHorizontal();
                 commandArray[i] = EditorGUILayout.Popup("   Command " + (i + 1), commandArray[i], new List<string>(commandOptions.Values).ToArray(), GUILayout.Width(250));
 
-                if (commandArray[i] != Patroller.AI_WAIT) {
+                if (commandArray[i] == Patroller.AI_FORWARD) {
                     int limit = serializedObject.FindProperty("patrolPoints").arraySize;
                     int[] patrolPointRange = new int[limit];
                     string[] patrolPointNames = new string[limit];
