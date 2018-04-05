@@ -1,0 +1,521 @@
+fileFormatVersion: 2
+guid: debf13542d4f51347b576e78dfc04bea
+timeCreated: 1522531860
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Base Human
+    100002: Base HumanHead
+    100004: Base HumanHeadGizmo
+    100006: Base HumanLArm
+    100008: Base HumanLArmCollarbone
+    100010: Base HumanLArmCollarboneGizmo
+    100012: Base HumanLArmDigit11
+    100014: Base HumanLArmDigit11Gizmo
+    100016: Base HumanLArmDigit12
+    100018: Base HumanLArmDigit12Gizmo
+    100020: Base HumanLArmDigit13
+    100022: Base HumanLArmDigit13Gizmo
+    100024: Base HumanLArmDigit21
+    100026: Base HumanLArmDigit21Gizmo
+    100028: Base HumanLArmDigit22
+    100030: Base HumanLArmDigit22Gizmo
+    100032: Base HumanLArmDigit23
+    100034: Base HumanLArmDigit23Gizmo
+    100036: Base HumanLArmForearm1
+    100038: Base HumanLArmForearm2
+    100040: Base HumanLArmPalm
+    100042: Base HumanLArmUpperarm
+    100044: Base HumanLArmUpperarmGizmo
+    100046: Base HumanLCalf
+    100048: Base HumanLDigit11
+    100050: Base HumanLDigit11Gizmo
+    100052: Base HumanLFoot
+    100054: Base HumanLPlatform
+    100056: Base HumanLThigh
+    100058: Base HumanNeck1
+    100060: Base HumanNeck2
+    100062: Base HumanPelvis
+    100064: Base HumanPelvisGizmo
+    100066: Base HumanRCalf
+    100068: Base HumanRCollarbone
+    100070: Base HumanRCollarboneGizmo
+    100072: Base HumanRDigit11
+    100074: Base HumanRDigit11 1
+    100076: Base HumanRDigit11Gizmo
+    100078: Base HumanRDigit11Gizmo 1
+    100080: Base HumanRDigit12
+    100082: Base HumanRDigit12Gizmo
+    100084: Base HumanRDigit13
+    100086: Base HumanRDigit13Gizmo
+    100088: Base HumanRDigit21
+    100090: Base HumanRDigit21Gizmo
+    100092: Base HumanRDigit22
+    100094: Base HumanRDigit22Gizmo
+    100096: Base HumanRDigit23
+    100098: Base HumanRDigit23Gizmo
+    100100: Base HumanRFoot
+    100102: Base HumanRForearm1
+    100104: Base HumanRForearm2
+    100106: Base HumanRibcage
+    100108: Base HumanRibcageGizmo
+    100110: Base HumanRPalm
+    100112: Base HumanRPlatform
+    100114: Base HumanRThigh
+    100116: Base HumanRUpperarm
+    100118: Base HumanRUpperarmGizmo
+    100120: Base HumanSpine1
+    100122: Base HumanSpine2
+    100124: Base HumanSpine3
+    100126: Base HumanSpine4
+    100128: Bone001
+    100130: Bone002
+    100132: Bone003
+    100134: Bone004
+    100136: Bone005
+    100138: Bone006
+    100140: Camera
+    100142: //RootNode
+    100144: Guard_Body
+    100146: Guard_Feather
+    100148: Halberd_Shaft
+    100150: IKTarget001
+    100152: Lamp
+    100154: Omni001
+    100156: Omni002
+    100158: Sky001
+    100160: Spot001
+    100162: Spot001.Target
+    400000: Base Human
+    400002: Base HumanHead
+    400004: Base HumanHeadGizmo
+    400006: Base HumanLArm
+    400008: Base HumanLArmCollarbone
+    400010: Base HumanLArmCollarboneGizmo
+    400012: Base HumanLArmDigit11
+    400014: Base HumanLArmDigit11Gizmo
+    400016: Base HumanLArmDigit12
+    400018: Base HumanLArmDigit12Gizmo
+    400020: Base HumanLArmDigit13
+    400022: Base HumanLArmDigit13Gizmo
+    400024: Base HumanLArmDigit21
+    400026: Base HumanLArmDigit21Gizmo
+    400028: Base HumanLArmDigit22
+    400030: Base HumanLArmDigit22Gizmo
+    400032: Base HumanLArmDigit23
+    400034: Base HumanLArmDigit23Gizmo
+    400036: Base HumanLArmForearm1
+    400038: Base HumanLArmForearm2
+    400040: Base HumanLArmPalm
+    400042: Base HumanLArmUpperarm
+    400044: Base HumanLArmUpperarmGizmo
+    400046: Base HumanLCalf
+    400048: Base HumanLDigit11
+    400050: Base HumanLDigit11Gizmo
+    400052: Base HumanLFoot
+    400054: Base HumanLPlatform
+    400056: Base HumanLThigh
+    400058: Base HumanNeck1
+    400060: Base HumanNeck2
+    400062: Base HumanPelvis
+    400064: Base HumanPelvisGizmo
+    400066: Base HumanRCalf
+    400068: Base HumanRCollarbone
+    400070: Base HumanRCollarboneGizmo
+    400072: Base HumanRDigit11
+    400074: Base HumanRDigit11 1
+    400076: Base HumanRDigit11Gizmo
+    400078: Base HumanRDigit11Gizmo 1
+    400080: Base HumanRDigit12
+    400082: Base HumanRDigit12Gizmo
+    400084: Base HumanRDigit13
+    400086: Base HumanRDigit13Gizmo
+    400088: Base HumanRDigit21
+    400090: Base HumanRDigit21Gizmo
+    400092: Base HumanRDigit22
+    400094: Base HumanRDigit22Gizmo
+    400096: Base HumanRDigit23
+    400098: Base HumanRDigit23Gizmo
+    400100: Base HumanRFoot
+    400102: Base HumanRForearm1
+    400104: Base HumanRForearm2
+    400106: Base HumanRibcage
+    400108: Base HumanRibcageGizmo
+    400110: Base HumanRPalm
+    400112: Base HumanRPlatform
+    400114: Base HumanRThigh
+    400116: Base HumanRUpperarm
+    400118: Base HumanRUpperarmGizmo
+    400120: Base HumanSpine1
+    400122: Base HumanSpine2
+    400124: Base HumanSpine3
+    400126: Base HumanSpine4
+    400128: Bone001
+    400130: Bone002
+    400132: Bone003
+    400134: Bone004
+    400136: Bone005
+    400138: Bone006
+    400140: Camera
+    400142: //RootNode
+    400144: Guard_Body
+    400146: Guard_Feather
+    400148: Halberd_Shaft
+    400150: IKTarget001
+    400152: Lamp
+    400154: Omni001
+    400156: Omni002
+    400158: Sky001
+    400160: Spot001
+    400162: Spot001.Target
+    2100000: Guard_shiny
+    2100002: Guard_matte
+    2100004: Metal
+    2100006: 10 - Default
+    2100008: Metal_Edge
+    2300000: Halberd_Shaft
+    3300000: Halberd_Shaft
+    4300000: Guard_Body
+    4300002: Halberd_Shaft
+    4300004: Guard_Feather
+    7400000: G_Right_Idle
+    7400002: G_Walk
+    7400004: G_Left_Idle
+    7400006: G_Idle_Scratch
+    7400008: G_Search
+    7400010: G_Give_Up
+    7400012: G_Run
+    7400014: G_Attack
+    9500000: //RootNode
+    13700000: Guard_Body
+    13700002: Guard_Feather
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 10 - Default
+    second: {fileID: 2100000, guid: fd47595eed750e64a95a9d2bce648499, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Guard_matte
+    second: {fileID: 2100000, guid: 60278f772dd4163408b1c1d4ac9b0c4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Guard_shiny
+    second: {fileID: 2100000, guid: 60278f772dd4163408b1c1d4ac9b0c4a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal_Edge
+    second: {fileID: 2100000, guid: fd47595eed750e64a95a9d2bce648499, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.2
+    animationPositionError: 0.2
+    animationScaleError: 0.2
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: G_Walk
+      takeName: Take 001
+      firstFrame: 15
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Right_Idle
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Left_Idle
+      takeName: Take 001
+      firstFrame: 140
+      lastFrame: 180
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Idle_Scratch
+      takeName: Take 001
+      firstFrame: 180
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Search
+      takeName: Take 001
+      firstFrame: 287
+      lastFrame: 340
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Give_Up
+      takeName: Take 001
+      firstFrame: 340
+      lastFrame: 390
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Run
+      takeName: Take 001
+      firstFrame: 405
+      lastFrame: 425
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: G_Attack
+      takeName: Take 001
+      firstFrame: 425
+      lastFrame: 465
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
