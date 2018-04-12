@@ -40,7 +40,6 @@ public class PlayerInput : MonoBehaviour
         if (xMove < 0) {
             angle = -angle;
         }
-        Debug.Log(angle);
 
         /*
         if (Input.GetAxisRaw("Horizontal") > 0) {
@@ -57,10 +56,12 @@ public class PlayerInput : MonoBehaviour
         //rb.AddForce(Vector3.right * xMove + Vector3.forward * yMove);
 
         if (xMove != 0 || yMove != 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, angle));
+            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, angle, 12));
         }
 
-        rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
+        if (Mathf.Abs((rb.transform.rotation.eulerAngles.y + 360) % 360 - (angle + 360) % 360) < 60) {
+            rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
+        }
 
         if (xMove == 0 && yMove == 0)
         {
