@@ -25,9 +25,15 @@ public class Patroller : MonoBehaviour {
     /// <summary>
     /// If >= 0, interupts current AI flow and preforms command
     /// </summary>
-    private int forceCommand = -1;
+    private int forceCommand = AI_NULL;
+    /// <summary>
+    /// Parameters to execute during a forced command
+    /// </summary>
     private int forceCommandParameters = -1;
 
+    /// <summary>
+    /// The last point spotted by the guard.
+    /// </summary>
     private Vector2 PointSpotted;
 
     /// <summary>
@@ -64,14 +70,24 @@ public class Patroller : MonoBehaviour {
     /// Stand still for parameter seconds
     /// </summary>
     public const int AI_WAIT = 0;
-
+    /// <summary>
+    /// For forced AI options.  Resets AI to normal state.
+    /// </summary>
+    public const int AI_NULL = -1;
     /// <summary>
     /// Chase the player
     /// </summary>
     public const int AI_CHASE = 10;
-
+    /// <summary>
+    /// 
+    /// </summary>
     public const int AI_SPOT = 11;
     public const int AI_GLANCE = 12;
+
+    /// <summary>
+    /// How long it takes the AI to notice the player
+    /// </summary>
+    public const int NOTICE_TIME = 2000;
 
 
     // Use this for initialization
@@ -87,7 +103,7 @@ public class Patroller : MonoBehaviour {
         if (AiState != AI_CHASE) {
             if (CheckSight()) {
                 fov.ViewAreaColor = FieldOfView.ALERTED_VIEWCONE;
-                if (AiState != AI_SPOT) ForceAI(AI_SPOT, 2000);
+                if (AiState != AI_SPOT) ForceAI(AI_SPOT, NOTICE_TIME);
             } else {
                 fov.ViewAreaColor = FieldOfView.NEUTRAL_VIEWCONE;
             }
@@ -130,6 +146,7 @@ public class Patroller : MonoBehaviour {
                 Suspicious((float)(AiParamaters / 1000));
                 break;
             case AI_GLANCE:
+                Glance((float)(AiParamaters / 1000));
                 break;
             default:
                 break;
@@ -151,8 +168,9 @@ public class Patroller : MonoBehaviour {
     private void Suspicious(float seconds) {
         if (commandProcessing) {
             curWait += Time.deltaTime;
-            if (!CheckSight()) {
-                ForceAI(AI_GLANCE, 600);
+            if (!CheckSight() && curWait >= seconds) {
+                commandProcessing = false;
+                ForceAI(AI_NULL, 0);
             } else if (curWait >= seconds) {
                 commandProcessing = false;
                 ForceAI(AI_CHASE, 0);
