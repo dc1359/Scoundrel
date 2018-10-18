@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
@@ -8,6 +9,12 @@ public class PlayerInput : MonoBehaviour
     private float speed;
     Rigidbody rb;
     Animator animator;
+	public GameObject Player;
+	public GameObject Menu;
+	public GameObject Options;
+	public Button Inventory;
+	public Vector3 playerPosition;
+	public bool isPaused;
 
     // Use this for initialization
     void Start()
@@ -15,11 +22,39 @@ public class PlayerInput : MonoBehaviour
         speed = 4;
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+		isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+		// If the game is unpaused, pause it and vice versa
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			if (isPaused == true) 
+			{
+				if (Options.activeSelf) 
+				{
+					Options.SetActive(false);
+					Menu.SetActive(true);
+				} 
+				else 
+				{
+					Menu.SetActive(false);
+					Options.SetActive(false);
+					isPaused = false;
+					Time.timeScale = 1;
+				}
+			} 
+			else 
+			{
+				isPaused = true;
+				Time.timeScale = 0;
+				Menu.SetActive(true);
+				Inventory.Select();
+			}
+		}
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
 			animator.SetBool("isRunning", true);
@@ -102,4 +137,9 @@ public class PlayerInput : MonoBehaviour
 
         }
     }
+
+	void OnGUI()
+	{
+		// placeholder for GUI stuff
+	}
 }
