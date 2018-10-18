@@ -59,9 +59,12 @@ public class PlayerInput : MonoBehaviour
             rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, angle, 12));
         }
 
-        if (Mathf.Abs((rb.transform.rotation.eulerAngles.y + 360) % 360 - (angle + 360) % 360) < 60) {
+        /*
+        if (Mathf.Abs((rb.transform.rotation.eulerAngles.y + 360) % 360 - (angle + 360) % 360) < 30) {
             rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
         }
+        */
+        rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
 
         if (xMove == 0 && yMove == 0)
         {
