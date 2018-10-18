@@ -1,13 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 /// <summary>
 /// Class Patroller
 /// Agent behivour for patrolling guards
 /// </summary>
 public class Patroller : MonoBehaviour {
-    [SerializeField] private float speed = 2;
+    private float speed {
+        get {
+            return agent.speed;
+        }
+        set {
+            agent.speed = value;
+        }
+    }
     [SerializeField] private Vector2[] patrolPoints;
 
     /// <summary>
@@ -21,6 +29,8 @@ public class Patroller : MonoBehaviour {
     /// AI_FORWARD - index of point to approach
     /// </summary>
     [HideInInspector] public List<int> commandParameters;
+
+    [HideInInspector] private NavMeshAgent agent;
 
     /// <summary>
     /// If >= 0, interupts current AI flow and preforms command
@@ -89,6 +99,11 @@ public class Patroller : MonoBehaviour {
     /// </summary>
     public const int NOTICE_TIME = 2000;
 
+    public const float GLANCE_ANGLE_MOD = 90;
+    public const int GLANCE_CHANGE = 1500;
+    public const int GLANCE_GIVEUP = GLANCE_CHANGE * 4;
+    private float glanceAngle, glanceFactor;
+
 
     // Use this for initialization
     void Start() {
@@ -96,6 +111,8 @@ public class Patroller : MonoBehaviour {
         commandIndex = 0;
 
         fov = this.GetComponentInChildren<FieldOfView>(true);
+
+        agent = this.GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -111,6 +128,7 @@ public class Patroller : MonoBehaviour {
             fov.ViewAreaColor = FieldOfView.HOSTILE_VIEWCONE;
         }
 
+        r.angularVelocity = Vector3.zero;
         CheckCurrentCommand(AiState);
     }
 
@@ -158,7 +176,31 @@ public class Patroller : MonoBehaviour {
     /// </summary>
     /// <param name="seconds">seconds to glance around</param>
     private void Glance(float seconds) {
-        
+        if (commandProcessing) {
+            curWait += Time.deltaTime;
+
+            if (curWait >= seconds) {
+                commandProcessing = false;
+                ForceAI(AI_NULL);
+            } else {
+                if (curWait > (GLANCE_CHANGE * glanceFactor) / 1000) {
+                    glanceFactor++;
+                    glanceAngle += (GLANCE_ANGLE_MOD - Random.value * GLANCE_ANGLE_MOD * 2) % 360;
+                }
+
+                float rot = Utility.DesireSmoothAngle(transform.rotation.eulerAngles.y, glanceAngle);
+
+                if (rot < 1) {
+                    transform.Rotate(Vector3.up, rot);
+                }
+            }
+            Debug.Log(agent.isStopped + ":  " + (seconds - curWait) + ": factor: " + glanceFactor);
+        } else {
+            curWait = 0;
+            glanceAngle = transform.rotation.eulerAngles.y;
+            glanceFactor = 0;
+            commandProcessing = true;
+        }
     }
 
     /// <summary>
@@ -177,6 +219,7 @@ public class Patroller : MonoBehaviour {
             }
         } else {
             curWait = 0;
+            agent.isStopped = true;
             commandProcessing = true;
         }
     }
@@ -197,12 +240,19 @@ public class Patroller : MonoBehaviour {
             PointSpotted = targetPoint;
         } else {
             targetPoint = scoutPoint;
+            if (ReachedDestination(targetPoint)) {
+                r.velocity = Vector3.zero;
+                
+                ForceAI(AI_GLANCE, GLANCE_GIVEUP);
+            }
         }
 
-        r.transform.LookAt(new Vector3(targetPoint.x, r.transform.position.y, targetPoint.y));
-        r.AddRelativeForce(Vector3.forward * Mathf.RoundToInt(speed * 1.5f));
+        //r.transform.LookAt(new Vector3(targetPoint.x, r.transform.position.y, targetPoint.y));
+        //r.AddRelativeForce(Vector3.forward * Mathf.RoundToInt(speed * 1.5f));
+        Debug.Log(agent.isStopped);
 
-
+        agent.isStopped = false;
+        agent.SetDestination(new Vector3(targetPoint.x, r.position.y, targetPoint.y));
     }
 
     /// <summary>
@@ -250,20 +300,23 @@ public class Patroller : MonoBehaviour {
     /// <param name="point">Point to approach</param>
     void MoveForward(Vector3 point) {
         if (commandProcessing) {
-            r.transform.LookAt(point);
+            agent.isStopped = false;
+            agent.SetDestination(point);
+            //r.transform.LookAt(point);
             //r.transform.rotation = Quaternion.Euler(0, Vector3.Angle(r.position, point), 0);
             // Odd behaivour, would slow down when approaching point.
-            r.AddRelativeForce(Vector3.forward * speed);
+            //r.AddRelativeForce(Vector3.forward * speed);
             //r.velocity = ((point - r.position).normalized * speed);
             
-            if (Vector3.Distance(r.position, point) <= 0.1) {
+            if (ReachedDestination(point)) {
                 r.velocity = Vector3.zero;
                 CommandIndex++;
                 commandProcessing = false;
+                agent.isStopped = true;
             }
         } else {
             commandProcessing = true;
-            r.transform.LookAt(point);
+            //r.transform.LookAt(point);
         }
     }
 
@@ -281,7 +334,7 @@ public class Patroller : MonoBehaviour {
         }
     }
 
-    public void ForceAI(int command, int parameters) {
+    public void ForceAI(int command, int parameters = 0) {
         forceCommand = command;
         forceCommandParameters = parameters;
         commandProcessing = false;
@@ -324,4 +377,12 @@ public class Patroller : MonoBehaviour {
         }
     }
 
+    private bool ReachedDestination(Vector3 destination) {
+        return ReachedDestination(new Vector2(destination.x, destination.z));
+    }
+
+    private bool ReachedDestination(Vector2 destination) {
+        Vector2 source = new Vector2(transform.position.x, transform.position.z);
+        return (Vector2.Distance(source, destination) < Mathf.Min(agent.stoppingDistance * 2, agent.stoppingDistance + 1));
+    }
 }

@@ -19,7 +19,7 @@ public class R_Animations : StateMachineBehaviour {
             idleTimer = 0;
         }
 
-        Debug.Log(idleTimer);
+        //Debug.Log(idleTimer);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
