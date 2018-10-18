@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scoundrel-master", "Assembly-CSharp.csproj", "{0EAC3D32-C510-0BFD-863E-68A119790EFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scoundrel-master", "Assembly-CSharp-Editor.csproj", "{012EE1FA-DC6D-E080-250E-DFBCCCFB4628}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EAC3D32-C510-0BFD-863E-68A119790EFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EAC3D32-C510-0BFD-863E-68A119790EFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EAC3D32-C510-0BFD-863E-68A119790EFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EAC3D32-C510-0BFD-863E-68A119790EFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012EE1FA-DC6D-E080-250E-DFBCCCFB4628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012EE1FA-DC6D-E080-250E-DFBCCCFB4628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012EE1FA-DC6D-E080-250E-DFBCCCFB4628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012EE1FA-DC6D-E080-250E-DFBCCCFB4628}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
