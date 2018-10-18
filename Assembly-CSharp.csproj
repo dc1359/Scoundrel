@@ -56,11 +56,16 @@
      <Compile Include="Assets\Scripts\CameraTarget.cs" />
      <Compile Include="Assets\Scripts\Navigator\Pathfinding.cs" />
      <Compile Include="Assets\Scripts\Navigator\Waypoints.cs" />
+     <Compile Include="Assets\Scripts\OptionsMenu.cs" />
      <Compile Include="Assets\Scripts\Patrol\FieldOfView.cs" />
      <Compile Include="Assets\Scripts\Patrol\Navigation.cs" />
      <Compile Include="Assets\Scripts\Patrol\Patroller.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\R_Animations.cs" />
+     <Compile Include="Assets\Scripts\UI Buttons\Exit.cs" />
+     <Compile Include="Assets\Scripts\UI Buttons\Inventory.cs" />
+     <Compile Include="Assets\Scripts\UI Buttons\Options.cs" />
      <Compile Include="Assets\Scripts\Utility\Utility.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/DC135/Documents/Unity Projects/Scoundrel/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
