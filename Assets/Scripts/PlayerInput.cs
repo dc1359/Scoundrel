@@ -34,36 +34,9 @@ public class PlayerInput : MonoBehaviour
 
         float xMove = Input.GetAxis("Horizontal") * speed;
         float yMove = Input.GetAxis("Vertical") * speed;
-
-        Vector3 heading = new Vector3(xMove, 0, yMove).normalized;
-        float angle = Vector3.Angle(Vector3.forward, heading);
-        if (xMove < 0) {
-            angle = -angle;
-        }
-
-        /*
-        if (Input.GetAxisRaw("Horizontal") > 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, 90));
-        } else if (Input.GetAxisRaw("Horizontal") < 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, -90));
-        } else if (Input.GetAxisRaw("Vertical") > 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, 0));
-        } else if (Input.GetAxisRaw("Vertical") < 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, 180));
-        }
-        */
-
+        
         //rb.AddForce(Vector3.right * xMove + Vector3.forward * yMove);
 
-        if (xMove != 0 || yMove != 0) {
-            rb.transform.Rotate(Vector3.up, Utility.DesireSmoothAngle(rb.transform.rotation.eulerAngles.y, angle, 12));
-        }
-
-        /*
-        if (Mathf.Abs((rb.transform.rotation.eulerAngles.y + 360) % 360 - (angle + 360) % 360) < 30) {
-            rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
-        }
-        */
         rb.velocity = Vector3.right * xMove + Vector3.forward * yMove;
 
         if (xMove == 0 && yMove == 0)
